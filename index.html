@@ -323,6 +323,7 @@
             {
                 id: 1,
                 title: "Koruna",
+                website: "https://koruna.app",
                 tag: "Order Management / AI",
                 screenshots: [
                     "KorunaHome.jpeg",
@@ -338,6 +339,7 @@
             {
                 id: 2,
                 title: "Hawatrans.id",
+                website: "https://hawatrans.id",
                 tag: "Agency / Content Management",
                 screenshots: [
                     "HawatransHome.jpeg",
@@ -353,6 +355,7 @@
             {
                 id: 3,
                 title: "Finote",
+                website: "https://studio--studio-9873462534-de720.us-central1.hosted.app/",
                 tag: "Expense Tracker / Finance",
                 screenshots: [
                     "finotehomepage.PNG",
@@ -363,7 +366,34 @@
                 desc_id: "Website untuk melacak pengeluaran dan keuangan pribadi.",
                 desc_en: "Website for tracking personal expenses and finances."
             },
-              {
+            {
+                id: 7,
+                title: "Hentpro",
+                website: "https://hentpro.com/",
+                tag: "Sworn Translator / Single Page",
+                screenshots: [
+                    "hentpro-home.png",
+                    "hentpro-aboutus.png",
+                    "hentpro-form.png",
+                    "hentpro-footer.png"
+                ],
+                desc_id: "Website single page jasa penerjemah tersumpah dengan alur informasi Home, About Us, Form, dan Footer.",
+                desc_en: "Single-page sworn translator service website with Home, About Us, Form, and Footer information flow."
+            },
+            {
+                id: 8,
+                title: "Aurumbrew",
+                website: "https://aurumbrew.netlify.app/",
+                tag: "E-commerce / Coffee Shop",
+                screenshots: [
+                    "aurumbrew1.webp",
+                    "aurumbrew2.webp",
+                    "aurumbrew3.webp"
+                ],
+                desc_id: "Website e-commerce untuk coffee shop Aurumbrew dengan tampilan produk yang hangat dan modern.",
+                desc_en: "E-commerce website for Aurumbrew coffee shop with a warm and modern product showcase."
+            },
+            {
                 id: 4,
                 title: "EasyCafe",
                 tag: "POS System / Cafe",
@@ -403,31 +433,6 @@
                 // DESKRIPSI BARU EASYCAFE
                 desc_id: "Website manajemen tugas untuk meningkatkan produktivitas.",
                 desc_en: "Website for task management to enhance productivity."
-            },
-            {
-                id: 7,
-                title: "Hentpro",
-                tag: "Sworn Translator / Single Page",
-                screenshots: [
-                    "hentpro-home.png",
-                    "hentpro-aboutus.png",
-                    "hentpro-form.png",
-                    "hentpro-footer.png"
-                ],
-                desc_id: "Website single page jasa penerjemah tersumpah dengan alur informasi Home, About Us, Form, dan Footer.",
-                desc_en: "Single-page sworn translator service website with Home, About Us, Form, and Footer information flow."
-            },
-            {
-                id: 8,
-                title: "Aurumbrew",
-                tag: "E-commerce / Coffee Shop",
-                screenshots: [
-                    "aurumbrew1.webp",
-                    "aurumbrew2.webp",
-                    "aurumbrew3.webp"
-                ],
-                desc_id: "Website e-commerce untuk coffee shop Aurumbrew dengan tampilan produk yang hangat dan modern.",
-                desc_en: "E-commerce website for Aurumbrew coffee shop with a warm and modern product showcase."
             }
         ];
 
@@ -498,7 +503,10 @@
                             <span class="badge">${item.tag}</span>
                             <h3>${item.title}</h3>
                             <p>${desc}</p>
-                            <div class="view-more">${btnText} &#8594;</div>
+                            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+                                <div class="view-more">${btnText} &#8594;</div>
+                                ${item.website ? '<a href="'+item.website+'" target="_blank" class="view-more" style="white-space:nowrap;" onclick="event.stopPropagation()">Lihat Website</a>' : ''}
+                            </div>
                         </div>
                     </div>
                 `;
